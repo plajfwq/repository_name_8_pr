@@ -1,7 +1,8 @@
-# repository_name_8_pr
+
 echo "hello world";
 //внесённое изменение
 <?php
+<<<<<<< HEAD
 class hahaClass{
     public function __construct()
     {
@@ -11,4 +12,7 @@ class hahaClass{
 }
 
 $hahaClass = new hahaClass();
+
+
+>>>>>>> plajfwq-patch-2
 ?>
