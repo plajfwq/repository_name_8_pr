@@ -2,5 +2,13 @@
 echo "hello world";
 //внесённое изменение
 <?php
-echo PHP_VERSION;
+class hahaClass{
+    public function __construct()
+    {
+        echo __CLASS__;
+    }
+
+}
+
+$hahaClass = new hahaClass();
 ?>
