@@ -1,26 +1,27 @@
- <?php
-  $menu_items = array(
+<?php
+$menu_items = [
     'Главная' => 'index.php',
     'О нас' => 'about.php',
-    'Услуги' => array(
-      'Веб-разработка' => 'web-development.php',
-      'Дизайн' => 'design.php',
-      'Маркетинг' => 'marketing.php'
-    ),
+    'Услуги' => [
+        'Веб-разработка' => 'web-development.php',
+        'Дизайн' => 'design.php',
+        'Маркетинг' => 'marketing.php'
+    ],
     'Контакты' => 'contacts.php'
-  );
+];
 
-  foreach ($menu_items as $label => $link) {
+foreach ($menu_items as $label => $link) {
     if (is_array($link)) {
-      echo '<li class="dropdown">';
-      echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown">' . $label . '<b class="caret"></b></a>';
-      echo '<ul class="dropdown-menu">';
-      foreach ($link as $sub_label => $sub_link) {
-        echo '<li><a href="' . $sub_link . '">' . $sub_label . '</a></li>';
-      }
-      echo '</ul>';
-      echo '</li>';
+        echo '<li class="dropdown">';
+        echo '<a href="#" class="dropdown-toggle" data-toggle="dropdown">' . $label . '<b class="caret"></b></a>';
+        echo '<ul class="dropdown-menu">';
+        foreach ($link as $sub_label => $sub_link) {
+            echo '<li><a href="' . $sub_link . '">' . $sub_label . '</a></li>';
+        }
+        echo '</ul>';
+        echo '</li>';
     } else {
-      echo '<li><a href="' . $link . '">' . $label . '</a></li>';
+        echo '<li><a href="' . $link . '">' . $label . '</a></li>';
     }
-  }
+}
+?>
